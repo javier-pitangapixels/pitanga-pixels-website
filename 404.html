@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Pitanga Pixels</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .page-404 {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(2rem, 8vw, 6rem) var(--container-pad);
+      gap: var(--space-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-404__glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: var(--color-accent-glow);
+      filter: blur(100px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .page-404__code {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 20vw, 12rem);
+      line-height: 1;
+      color: var(--color-accent);
+      letter-spacing: 0.05em;
+      position: relative;
+    }
+
+    .page-404__heading {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-primary);
+      position: relative;
+    }
+
+    .page-404__body {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      max-width: 400px;
+      line-height: 1.65;
+      position: relative;
+    }
+
+    .page-404__actions {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .page-404__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--color-text-primary);
+      position: relative;
+    }
+
+    .page-404__logo-wordmark {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PASSWORD WALL — remove when site goes public -->
+  <div class="password-wall" id="password-wall" role="dialog" aria-modal="true" aria-label="Site access">
+    <div class="password-wall__card">
+      <div class="password-wall__logo" aria-hidden="true">
+        <svg width="48" height="44" viewBox="0 0 48 44" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="0" width="4" height="4" fill="#3d6e2d"/>
+          <rect x="24" y="0" width="4" height="4" fill="#3d6e2d"/>
+          <rect x="16" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="20" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="24" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="28" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="12" y="8" width="4" height="4" fill="#FF7070"/>
+          <rect x="16" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="8" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="12" width="4" height="4" fill="#FF7070"/>
+          <rect x="12" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="16" y="12" width="4" height="4" fill="#B01818"/>
+          <rect x="20" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="12" width="4" height="4" fill="#B01818"/>
+          <rect x="28" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="12" width="4" height="4" fill="#B01818"/>
+          <rect x="36" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="40" y="12" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="16" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="16" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="20" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="20" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="24" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="24" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="28" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="28" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="32" width="4" height="4" fill="#FF7070"/>
+          <rect x="12" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="16" y="32" width="4" height="4" fill="#B01818"/>
+          <rect x="20" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="32" width="4" height="4" fill="#B01818"/>
+          <rect x="28" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="32" width="4" height="4" fill="#B01818"/>
+          <rect x="36" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="40" y="32" width="4" height="4" fill="#FF7070"/>
+          <rect x="12" y="36" width="4" height="4" fill="#FF7070"/>
+          <rect x="16" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="36" width="4" height="4" fill="#FF7070"/>
+          <rect x="16" y="40" width="4" height="4" fill="#FF7070"/>
+          <rect x="20" y="40" width="4" height="4" fill="#FF7070"/>
+          <rect x="24" y="40" width="4" height="4" fill="#FF7070"/>
+          <rect x="28" y="40" width="4" height="4" fill="#FF7070"/>
+        </svg>
+        <span class="password-wall__wordmark">Pitanga Pixels</span>
+      </div>
+      <p class="password-wall__label">This site is password protected.</p>
+      <form class="password-wall__form" id="password-form" novalidate>
+        <div class="password-wall__input-wrap">
+          <input
+            class="password-wall__input"
+            type="password"
+            id="password-input"
+            placeholder="Enter password"
+            autocomplete="current-password"
+            aria-label="Password"
+            required
+          >
+          <button type="submit" class="password-wall__btn btn btn--accent">Enter</button>
+        </div>
+        <p class="password-wall__error" id="password-error" role="alert" aria-live="polite" hidden>Incorrect password. Try again.</p>
+      </form>
+    </div>
+  </div>
+  <!-- END PASSWORD WALL -->
+
+  <main>
+    <div class="page-404">
+      <div class="page-404__glow" aria-hidden="true"></div>
+
+      <a href="/" class="page-404__logo" aria-label="Pitanga Pixels — go home">
+        <svg width="36" height="33" viewBox="0 0 48 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="20" y="0" width="4" height="4" fill="#3d6e2d"/>
+          <rect x="24" y="0" width="4" height="4" fill="#3d6e2d"/>
+          <rect x="16" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="20" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="24" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="28" y="4" width="4" height="4" fill="#6ab04c"/>
+          <rect x="12" y="8" width="4" height="4" fill="#FF7070"/>
+          <rect x="16" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="8" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="8" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="12" width="4" height="4" fill="#FF7070"/>
+          <rect x="12" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="16" y="12" width="4" height="4" fill="#B01818"/>
+          <rect x="20" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="12" width="4" height="4" fill="#B01818"/>
+          <rect x="28" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="12" width="4" height="4" fill="#B01818"/>
+          <rect x="36" y="12" width="4" height="4" fill="#E84040"/>
+          <rect x="40" y="12" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="16" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="16" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="16" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="16" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="20" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="20" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="20" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="20" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="24" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="24" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="24" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="24" width="4" height="4" fill="#FF7070"/>
+          <rect x="4"  y="28" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="12" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="16" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="24" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="32" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="36" y="28" width="4" height="4" fill="#B01818"/>
+          <rect x="40" y="28" width="4" height="4" fill="#E84040"/>
+          <rect x="44" y="28" width="4" height="4" fill="#FF7070"/>
+          <rect x="8"  y="32" width="4" height="4" fill="#FF7070"/>
+          <rect x="12" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="16" y="32" width="4" height="4" fill="#B01818"/>
+          <rect x="20" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="32" width="4" height="4" fill="#B01818"/>
+          <rect x="28" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="32" width="4" height="4" fill="#B01818"/>
+          <rect x="36" y="32" width="4" height="4" fill="#E84040"/>
+          <rect x="40" y="32" width="4" height="4" fill="#FF7070"/>
+          <rect x="12" y="36" width="4" height="4" fill="#FF7070"/>
+          <rect x="16" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="20" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="24" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="28" y="36" width="4" height="4" fill="#E84040"/>
+          <rect x="32" y="36" width="4" height="4" fill="#FF7070"/>
+          <rect x="16" y="40" width="4" height="4" fill="#FF7070"/>
+          <rect x="20" y="40" width="4" height="4" fill="#FF7070"/>
+          <rect x="24" y="40" width="4" height="4" fill="#FF7070"/>
+          <rect x="28" y="40" width="4" height="4" fill="#FF7070"/>
+        </svg>
+        <span class="page-404__logo-wordmark">Pitanga Pixels</span>
+      </a>
+
+      <p class="page-404__code" aria-label="Error 404">404</p>
+
+      <h1 class="page-404__heading">Page not found.</h1>
+      <p class="page-404__body">The page you're looking for doesn't exist or may have moved. Head back home and find what you need.</p>
+
+      <div class="page-404__actions">
+        <a href="/" class="btn btn--accent btn--lg">Back to home</a>
+        <a href="/#contact" class="btn btn--outline btn--lg">Get in touch</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

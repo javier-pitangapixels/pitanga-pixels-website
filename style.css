@@ -1383,3 +1383,108 @@ button {
     justify-content: center;
   }
 }
+
+
+/* ============================================================
+   16. PASSWORD WALL
+   Remove this entire section when the site is ready to go public.
+============================================================ */
+.password-wall {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  transition: opacity 0.5s ease;
+}
+
+.password-wall.is-hiding {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.password-wall__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.password-wall__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.password-wall__wordmark {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--color-text-primary);
+  letter-spacing: 0.04em;
+}
+
+.password-wall__label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.password-wall__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.password-wall__input-wrap {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.password-wall__input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: var(--color-bg-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 6px;
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.password-wall__input:focus {
+  border-color: var(--color-accent);
+}
+
+.password-wall__input.is-error {
+  border-color: var(--color-accent);
+  animation: shake 0.4s ease;
+}
+
+.password-wall__btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.password-wall__error {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}

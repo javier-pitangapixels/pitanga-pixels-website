@@ -406,9 +406,59 @@ function initCardTilt() {
 
 
 /* ============================================================
+   11. PASSWORD WALL
+   Blocks the page behind a password prompt.
+   Stores the unlocked state in localStorage so the user is
+   not asked again. Remove this function (and its call in init)
+   when the site is ready to go public.
+============================================================ */
+function initPasswordWall() {
+  const STORAGE_KEY = 'pp_unlocked';
+  const PASSWORD    = 'testitonprod';
+
+  const wall     = document.getElementById('password-wall');
+  const form     = document.getElementById('password-form');
+  const input    = document.getElementById('password-input');
+  const errorMsg = document.getElementById('password-error');
+
+  if (!wall || !form) return;
+
+  // Already unlocked this session — remove overlay immediately
+  if (localStorage.getItem(STORAGE_KEY) === '1') {
+    wall.remove();
+    return;
+  }
+
+  // Lock scroll while wall is visible
+  document.body.style.overflow = 'hidden';
+  input.focus();
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (input.value === PASSWORD) {
+      localStorage.setItem(STORAGE_KEY, '1');
+      document.body.style.overflow = '';
+      wall.classList.add('is-hiding');
+      wall.addEventListener('transitionend', () => wall.remove(), { once: true });
+    } else {
+      errorMsg.hidden = false;
+      input.classList.add('is-error');
+      input.value = '';
+      input.focus();
+      input.addEventListener('animationend', () => {
+        input.classList.remove('is-error');
+      }, { once: true });
+    }
+  });
+}
+
+
+/* ============================================================
    INIT — run all functions after DOM is ready
 ============================================================ */
 function init() {
+  initPasswordWall();
   initNavScroll();
   initSectionObserver();
   initRevealObserver();
